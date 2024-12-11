@@ -104,7 +104,7 @@ fun ProductItemPreview() {
             ProductItem(
                 Product(
                     name = LoremIpsum(50).values.first(),
-                    price = BigDecimal("14.99"),
+                    price = BigDecimal("14.89"),
                     image = null,
                     description = LoremIpsum(15).values.first()
                 )
