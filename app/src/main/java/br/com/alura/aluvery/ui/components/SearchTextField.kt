@@ -1,7 +1,5 @@
 package br.com.alura.aluvery.ui.components
 
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Search
@@ -10,18 +8,15 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 
 @Composable
-fun SearchTextField(searchText: String, onSearchChanged: (String) -> Unit ) {
+fun SearchTextField(searchText: String, onSearchChanged: (String) -> Unit, modifier: Modifier = Modifier ) {
     OutlinedTextField(
         value = searchText,
         onValueChange = { newValue ->
             onSearchChanged(newValue)
         },
-        Modifier
-            .padding(16.dp)
-            .fillMaxWidth(),
+        modifier,
         shape = RoundedCornerShape(100),
         leadingIcon = {
             Icon(Icons.Default.Search, contentDescription = "Icone de lupa")
